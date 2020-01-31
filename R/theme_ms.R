@@ -11,7 +11,7 @@
 #' @examples
 #'
 
-theme_ms <- function (
+theme_ak <- function (
   base_family="IBMPlexSans", base_size=12,
   grid=TRUE,
   dark=FALSE,
