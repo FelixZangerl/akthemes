@@ -15,11 +15,12 @@ theme_ak <- function (
   base_family="IBMPlexSans", base_size=12,
   grid=TRUE,
   dark=FALSE,
-  alttf=FALSE
+  alttf=FALSE,
+  logo=FALSE
 )
 
 {
-  mst <- theme_bw(base_family=base_family, base_size=base_size) %+replace%
+  akt <- theme_bw(base_family=base_family, base_size=base_size) %+replace%
     theme(
       plot.title = element_text(hjust=0, size = 18),
       plot.subtitle = element_text(hjust=0, size=12, margin=margin(8,0,5,0)),
@@ -41,14 +42,14 @@ theme_ak <- function (
 
   # GRID
   if (grid == TRUE) {
-    mst <- mst + theme(panel.grid.major=element_line(size=0.2),panel.grid.minor=element_blank())
+    akt <- akt + theme(panel.grid.major=element_line(size=0.2),panel.grid.minor=element_blank())
   } else {
-    mst <- mst + theme(panel.grid=element_blank())
+    akt <- akt + theme(panel.grid=element_blank())
   }
 
   # SCHEME
   if (dark == TRUE) {
-    mst <- mst +
+    akt <- akt +
       theme(plot.background=element_rect(fill=bgdark,color=bgdark),
             text=element_text(color="white"),
             strip.text=element_text(color="white"),
@@ -56,15 +57,34 @@ theme_ak <- function (
             legend.text = element_text(color="white")
             )
   } else {
-    mst <- mst
+    akt <- akt
   }
 
   # ALTERNATIVE TITLE FONT
   if (alttf == TRUE) {
-    mst <- mst + theme(plot.title = element_text(family="Playfair Display"))
+    akt <- akt + theme(plot.title = element_text(family="Playfair Display"))
   } else {
-    mst <- mst + theme(plot.title = element_text(family="MinionPro-BoldCapt",face="bold"))
+    akt <- akt + theme(plot.title = element_text(family="MinionPro-BoldCapt",face="bold"))
   }
+  # LOGO
+  if (logo == TRUE) {
+    img = readPNG(system.file("img", "Rlogo.png", package="png"))
 
-  mst
+    akt = akt +
+      annotation_custom(rasterGrob(img),
+                        xmin=0.95*min(mtcars$mpg)-1, xmax=0.95*min(mtcars$mpg)+1,
+                        ymin=0.62*min(mtcars$wt)-0.5, ymax=0.62*min(mtcars$wt)+0.5) +
+      annotation_custom(textGrob("Footer goes here", gp=gpar(col="blue")),
+                        xmin=max(mtcars$mpg), xmax=max(mtcars$mpg),
+                        ymin=0.6*min(mtcars$wt), ymax=0.6*min(mtcars$wt)) +
+      theme(plot.margin=margin(5,5,30,5))
+
+    # Turn off clipping
+    akt <- ggplot_gtable(ggplot_build(akt))
+    akt$layout$clip[akt$layout$name=="panel"] <- "off"
+    grid.draw(akt)
+  } else {
+    akt <- akt
+  }
+  akt
 }
