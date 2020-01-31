@@ -1,14 +1,14 @@
-# msthemes
+# akthemes
 
 A custom ggplot2 theme
 
 ## Installation
 
-`devtools::install_github("mschnetzer/msthemes")`
+`devtools::install_github("FelixZangerl/akthemes")`
 
 ## Usage
 
-`theme_ms()` calls the theme in a ggplot environment. The options are
+`theme_mak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
 `dark`  Switch color scheme to dark: `default=FALSE`  
