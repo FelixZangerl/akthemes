@@ -1,5 +1,5 @@
 # Few colors (e.g. for multiple groups)
-ak_palette <- c("#D8232A", "#000000", "#595959", "#595959", "#FFFFFF", "#D9D9D9")
+ak_palette <- c("#D8232A", "#000000", "#595959", "#595959", "#808080", "#D9D9D9")
 ak_pal <- function() { scales::manual_pal(ak_palette) }
 scale_color_akmany <- function(...) { discrete_scale("colour", "akmany", ak_pal(), ...) }
 scale_fill_akmany <- function(...) { discrete_scale("fill", "akmany", ak_pal(), ...) }

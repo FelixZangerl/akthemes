@@ -15,7 +15,8 @@ theme_ak <- function (
   base_family="Arial", base_size=12,
   grid=TRUE,
   dark=FALSE,
-  alttf=FALSE
+  alttf=FALSE,
+  logo=FALSE
 )
 
 {
@@ -64,6 +65,12 @@ theme_ak <- function (
     akt <- akt + theme(plot.title = element_text(family="Playfair Display"))
   } else {
     akt <- akt + theme(plot.title = element_text(family="MinionPro-BoldCapt",face="bold"))
+  }
+  # LOGO
+  if (logo == TRUE) {
+    akt <- akt + theme(legend.position = "bottom", plot.caption = element_text(hjust = 0))
+  } else {
+    akt <- akt
   }
   akt
 }

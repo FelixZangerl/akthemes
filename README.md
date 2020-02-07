@@ -13,15 +13,14 @@ Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Tho
 `theme_ak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
+`logo` which sets the legend position to `bottom` and the caption position to `bottom left`
 
 
 ### AK Logo
 
 The default approach is to:
 
-change caption postion to "bottom left" and legend postion to "bottom" with: 
-
-`theme(legend.position = "bottom", plot.caption = element_text(hjust = 0)`
+set logo TRUE: `theme_ak(logo=TRUE)`
 
 Save the ggplot with `ggsave(filename)`
 
@@ -33,4 +32,5 @@ Save the plot with: `magick::image_write(plot_with_logo, "plot_with_logo.png")`
 ## Color palettes
 
 * `ak_pal`: Few colors for multiple groups
+use with `scale_*_akmany` where * is `fill` or `color`
 
