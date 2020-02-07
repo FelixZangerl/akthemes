@@ -32,5 +32,8 @@ Save the plot with: `magick::image_write(plot_with_logo, "plot_with_logo.png")`
 ## Color palettes
 
 * `ak_pal`: Few colors for multiple groups
-use with `scale_*_akmany` where * is `fill` or `color`
+use with `scale_*_akfew` where `*` is `fill` or `color`
+* `akc_pal`: Few colors for countries
+use with `scale_*_akcountry` where `*` is `fill` or `color`
+
 
