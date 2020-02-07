@@ -13,8 +13,9 @@ Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Tho
 `theme_ak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
-[//]: # (`dark`  Switch color scheme to dark: `default=FALSE`  )
-[//]: # (`alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`)
+
+[//]: <> (`dark`  Switch color scheme to dark: `default=FALSE`.)
+[//]: <> (`alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`.)
 
 
 ### AK Logo
