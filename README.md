@@ -13,7 +13,7 @@ Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Tho
 `theme_ak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
-`logo` which sets the legend position to `bottom` and the caption position to `bottom left`
+`logo` which sets the legend position to `bottom` and the caption position to `bottom left`: `default=FALSE`
 
 
 ### AK Logo
@@ -33,7 +33,7 @@ Save the plot with: `magick::image_write(plot_with_logo, "plot_with_logo.png")`
 
 * `ak_pal`: Few colors for multiple groups
 use with `scale_*_akfew` where `*` is `fill` or `color`
-* `akc_pal`: Few colors for countries
+* `akc_pal`: Few colors for multiple countries
 use with `scale_*_akcountry` where `*` is `fill` or `color`
 
 
