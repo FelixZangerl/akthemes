@@ -1,8 +1,8 @@
-# Many colors (e.g. for multiple groups)
-ms_palette <- c("#d18975", "#8fd175", "#3f2d54", "#75b8d1", "#2d543d", "#c9d175", "#d1ab75", "#d175b8", "#758bd1")
-ms_pal <- function() { scales::manual_pal(ms_palette) }
-scale_color_msmany <- function(...) { discrete_scale("colour", "msmany", ms_pal(), ...) }
-scale_fill_msmany <- function(...) { discrete_scale("fill", "msmany", ms_pal(), ...) }
+# Few colors (e.g. for multiple groups)
+ak_palette <- c("#D8232A", "#000000", "#595959", "#595959", "#FFFFF", "#D9D9D9")
+ak_pal <- function() { scales::manual_pal(ak_palette) }
+scale_color_akmany <- function(...) { discrete_scale("colour", "akmany", ak_pal(), ...) }
+scale_fill_akmany <- function(...) { discrete_scale("fill", "akmany", ak_pal(), ...) }
 
 # Few dark (e.g. for line plots)
 msd_palette <- c("#d18975","#088A85","#0B0B61","#886A08")

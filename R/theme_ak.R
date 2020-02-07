@@ -12,11 +12,10 @@
 #'
 
 theme_ak <- function (
-  base_family="IBMPlexSans", base_size=12,
+  base_family="Arial", base_size=12,
   grid=TRUE,
   dark=FALSE,
-  alttf=FALSE,
-  logo=FALSE
+  alttf=FALSE
 )
 
 {
@@ -65,26 +64,6 @@ theme_ak <- function (
     akt <- akt + theme(plot.title = element_text(family="Playfair Display"))
   } else {
     akt <- akt + theme(plot.title = element_text(family="MinionPro-BoldCapt",face="bold"))
-  }
-  # LOGO
-  if (logo == TRUE) {
-    img = readPNG(system.file("img", "Rlogo.png", package="png"))
-
-    akt = akt +
-      annotation_custom(rasterGrob(img),
-                        xmin=0.95*min(mtcars$mpg)-1, xmax=0.95*min(mtcars$mpg)+1,
-                        ymin=0.62*min(mtcars$wt)-0.5, ymax=0.62*min(mtcars$wt)+0.5) +
-      annotation_custom(textGrob("Footer goes here", gp=gpar(col="blue")),
-                        xmin=max(mtcars$mpg), xmax=max(mtcars$mpg),
-                        ymin=0.6*min(mtcars$wt), ymax=0.6*min(mtcars$wt)) +
-      theme(plot.margin=margin(5,5,30,5))
-
-    # Turn off clipping
-    akt <- ggplot_gtable(ggplot_build(akt))
-    akt$layout$clip[akt$layout$name=="panel"] <- "off"
-    grid.draw(akt)
-  } else {
-    akt <- akt
   }
   akt
 }

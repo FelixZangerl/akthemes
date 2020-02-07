@@ -8,11 +8,25 @@ A custom ggplot2 theme
 
 ## Usage
 
-`theme_mak()` calls the theme in a ggplot environment. The options are
+`theme_ak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
 `dark`  Switch color scheme to dark: `default=FALSE`  
-`alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`  
+`alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`
+
+
+### AK Logo
+
+The default approach is to:
+
+change caption postion to "bottom left" and legend postion to "bottom" with: 
+
+`theme(legend.position = "bottom", plot.caption = element_text(hjust = 0)`
+
+Save the ggplot with `ggsave(filename)`
+
+Add the logo with `add_logo(plot_path = filename, logo_path = "./akwien.jpg", logo_position = c("top right", "top left", "bottom right", "bottom left"))`
+
 
 ## Color palettes
 

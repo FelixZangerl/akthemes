@@ -7,6 +7,10 @@ Authors@R: c(
     person("Zangerl", "Felix", email = "felix.zangerl@gmail.com", role = "aut"))
 Description: Custom light-weight ggplot2 theme for institutional use.
     Uses IBM Plex Sans font.
+Imports:
+    ggplot2,
+    magick,
+    magrittr
 License: GPL-2
 Encoding: UTF-8
 LazyData: true

@@ -2,9 +2,9 @@
 #'
 #' TTF should be placed in the fonts/plexsans folder
 #' @export
-import_ps <- function() {
-  ps_font_dir <- system.file("fonts", "plexsans",package="akthemes")
-  suppressWarnings(suppressMessages(extrafont::font_import(ps_font_dir, prompt=FALSE)))
+import_af <- function() {
+  af_font_dir <- system.file("fonts", "Arial",package="akthemes")
+  suppressWarnings(suppressMessages(extrafont::font_import(af_font_dir, prompt=FALSE)))
 }
 
 #' Import Minion Bold font
