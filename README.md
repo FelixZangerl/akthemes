@@ -25,7 +25,7 @@ change caption postion to "bottom left" and legend postion to "bottom" with:
 
 Save the ggplot with `ggsave(filename)`
 
-Add the logo with: `plot_with_logo <- add_logo(plot_path = filename, logo_path = "./akwien.jpg", logo_position = c("top right", "top left", "bottom right", "bottom left"))`
+Add the logo with: `plot_with_logo <- add_logo(plot_path = filename, logo_path = "https://wien.arbeiterkammer.at/logo-sticky-ak_wien.svg", logo_position = c("top right", "top left", "bottom right", "bottom left"))`
 
 Save the plot with: `magick::image_write(plot_with_logo, "plot_with_logo.png")`
 
