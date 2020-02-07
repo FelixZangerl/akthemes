@@ -2,7 +2,7 @@
 
 A custom ggplot2 theme for Arbeiterkammer Wien
 
-Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Thomas Mock for the logo adding (https://themockup.netlify.com/posts/2019-01-09-add-a-logo-to-your-plot/) 
+Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Thomas Mock for the `add_logo` function (https://themockup.netlify.com/posts/2019-01-09-add-a-logo-to-your-plot/) 
 
 ## Installation
 
