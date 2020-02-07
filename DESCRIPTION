@@ -1,6 +1,6 @@
 Package: akthemes
 Type: Package
-Title: Custom ggplot2 theme for Arbeiterkammer 
+Title: Custom ggplot2 theme for Arbeiterkammer Wien
 Version: 0.2.0
 Authors@R: c(
     person("Schnetzer", "Matthias", email = "matthias.schnetzer@akwien.at", role = c("cre","aut")),
@@ -10,7 +10,8 @@ Description: Custom light-weight ggplot2 theme for institutional use.
 Imports:
     ggplot2,
     magick,
-    magrittr
+    magrittr,
+    rsvg
 License: GPL-2
 Encoding: UTF-8
 LazyData: true
