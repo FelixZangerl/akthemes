@@ -1,6 +1,8 @@
 # akthemes
 
-A custom ggplot2 theme
+A custom ggplot2 theme for Arbeiterkammer Wien
+
+Credits go to mschnetzer (matthias.schnetzer@akwien.at) for the template and Thomas Mock for the logo adding (https://themockup.netlify.com/posts/2019-01-09-add-a-logo-to-your-plot/) 
 
 ## Installation
 
@@ -11,8 +13,8 @@ A custom ggplot2 theme
 `theme_ak()` calls the theme in a ggplot environment. The options are
 
 `grid`  Whether grid is printed or not: `default=TRUE`  
-`dark`  Switch color scheme to dark: `default=FALSE`  
-`alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`
+[//]: # `dark`  Switch color scheme to dark: `default=FALSE`  
+[//]: # `alttf` Choose alternative title font (Playfair Display, https://fonts.google.com/specimen/Playfair+Display): `default=FALSE`
 
 
 ### AK Logo
@@ -25,14 +27,12 @@ change caption postion to "bottom left" and legend postion to "bottom" with:
 
 Save the ggplot with `ggsave(filename)`
 
-Add the logo with `add_logo(plot_path = filename, logo_path = "./akwien.jpg", logo_position = c("top right", "top left", "bottom right", "bottom left"))`
+Add the logo with: `plot_with_logo <- add_logo(plot_path = filename, logo_path = "./akwien.jpg", logo_position = c("top right", "top left", "bottom right", "bottom left"))`
+
+Save the plot with: `magick::image_write(plot_with_logo, "plot_with_logo.png")`
 
 
 ## Color palettes
 
-* `ms_pal`: Many colors for multiple groups
-* `msd_pal`: Few dark colors for line plot
-* `msl_pal`: Few light colors for barplots with labels (http://www.color-hex.com/color-palette/807)
-* `msc_pal`: Cool colors for stacked barplots (http://www.color-hex.com/color-palette/14951)
-* `mss_pal`: Seastar palette (http://www.color-hex.com/color-palette/62747)
-* `msp_pal`: Pastel rainbow palette (http://www.color-hex.com/color-palette/2922)
+* `ak_pal`: Few colors for multiple groups
+
